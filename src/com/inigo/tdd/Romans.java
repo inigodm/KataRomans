@@ -6,6 +6,8 @@ public class Romans {
 		String res = "";
 		if (arabic == 1) {
 			res = "I";
+		}else if (arabic == 2) {
+			res = "II";
 		}
 		return res;
 	}

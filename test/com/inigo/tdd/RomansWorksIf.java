@@ -21,7 +21,7 @@ public class RomansWorksIf {
 	
 	@Test
 	public void given_Two_then_returns_II() {
-		int arabic = 1;
+		int arabic = 2;
 		String roman = Romans.toRoman(arabic);
 		assertEquals("II", roman);
 	}
