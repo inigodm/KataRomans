@@ -18,4 +18,11 @@ public class RomansWorksIf {
 		String roman = Romans.toRoman(arabic);
 		assertEquals("I", roman);
 	}
+	
+	@Test
+	public void given_Two_then_returns_II() {
+		int arabic = 1;
+		String roman = Romans.toRoman(arabic);
+		assertEquals("II", roman);
+	}
 }
