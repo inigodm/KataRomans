@@ -71,6 +71,7 @@ public class RomansWorksIf {
 		assertRomanNumber(17, "XVII");
 		assertRomanNumber(18, "XVIII");
 		assertRomanNumber(19, "XIX");
+		assertRomanNumber(20, "XX");
 	}
 	
 	private void assertRomanNumber(int arabic, String roman) {
