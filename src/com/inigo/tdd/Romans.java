@@ -4,12 +4,8 @@ public class Romans {
 
 	public static String toRoman(int arabic) {
 		String res = "";
-		if (arabic == 1) {
-			res = "I";
-		}else if (arabic == 2) {
-			res = "II";
-		}else if (arabic == 3) {
-			res = "III";
+		if (arabic <= 3 ) {
+			res = oneToThree(arabic);
 		}else if (arabic == 4) {
 			res = "IV";
 		}else if (arabic == 5) {
@@ -28,4 +24,11 @@ public class Romans {
 		return res;
 	}
 
+	private static String oneToThree(int arabic) {
+		String res = "";
+		for (int i = 0; i < arabic; i++) {
+			res += "I";
+		}
+		return res;
+	}
 }
