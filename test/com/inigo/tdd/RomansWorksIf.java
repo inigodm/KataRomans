@@ -1,7 +1,6 @@
 package com.inigo.tdd;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -11,5 +10,12 @@ public class RomansWorksIf {
 		int arabic = 0;
 		String roman = Romans.toRoman(arabic);
 		assertEquals("", roman);
+	}
+	
+	@Test
+	public void given_one_then_returns_I() {
+		int arabic = 1;
+		String roman = Romans.toRoman(arabic);
+		assertEquals("I", roman);
 	}
 }
