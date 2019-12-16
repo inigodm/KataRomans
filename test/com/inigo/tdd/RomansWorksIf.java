@@ -7,71 +7,74 @@ import org.junit.Test;
 public class RomansWorksIf {
 	@Test
 	public void given_zero_then_returns_void() {
-		int arabic = 0;
-		String roman = Romans.toRoman(arabic);
-		assertEquals("", roman);
+		assertRomanNumber(0, "");
 	}
 	
 	@Test
 	public void given_one_then_returns_I() {
-		int arabic = 1;
-		String roman = Romans.toRoman(arabic);
-		assertEquals("I", roman);
+		assertRomanNumber(1, "I");
 	}
 	
 	@Test
 	public void given_Two_then_returns_II() {
-		int arabic = 2;
-		String roman = Romans.toRoman(arabic);
-		assertEquals("II", roman);
+		assertRomanNumber(2, "II");
 	}
 	
 	@Test
 	public void given_Three_then_returns_III() {
-		int arabic = 3;
-		String roman = Romans.toRoman(arabic);
-		assertEquals("III", roman);
+		assertRomanNumber(3, "III");
+	}
+	
+	@Test
+	public void given_Four_then_returns_V() {
+		assertRomanNumber(4, "IV");
 	}
 	
 	@Test
 	public void given_Five_then_returns_V() {
-		int arabic = 5;
-		String roman = Romans.toRoman(arabic);
-		assertEquals("V", roman);
+		assertRomanNumber(5, "V");
 	}
 	
 	@Test
 	public void given_Six_then_returns_VI() {
-		int arabic = 6;
-		String roman = Romans.toRoman(arabic);
-		assertEquals("VI", roman);
+		assertRomanNumber(6, "VI");
 	}
 	
 	@Test
 	public void given_Seven_then_returns_VII() {
-		int arabic = 7;
-		String roman = Romans.toRoman(arabic);
-		assertEquals("VII", roman);
+		assertRomanNumber(7, "VII");
 	}
 	
 	@Test
 	public void given_Eight_then_returns_VIII() {
-		int arabic = 8;
-		String roman = Romans.toRoman(arabic);
-		assertEquals("VIII", roman);
+		assertRomanNumber(8, "VIII");
 	}
 	
 	@Test
 	public void given_Nine_then_returns_IX() {
-		int arabic = 9;
-		String roman = Romans.toRoman(arabic);
-		assertEquals("IX", roman);
+		assertRomanNumber(9, "IX");
 	}
 	
 	@Test
-	public void given_ten_then_returns_X() {
-		int arabic = 10;
-		String roman = Romans.toRoman(arabic);
-		assertEquals("X", roman);
+	public void given_Ten_then_returns_X() {
+		assertRomanNumber(10, "X");
+	}
+	
+	@Test
+	public void given_Eleven_to_twenty_then_returns_romans() {
+		assertRomanNumber(11, "XI");
+		assertRomanNumber(12, "XII");
+		assertRomanNumber(13, "XIII");
+		assertRomanNumber(14, "XIV");
+		assertRomanNumber(15, "XV");
+		assertRomanNumber(16, "XVI");
+		assertRomanNumber(17, "XVII");
+		assertRomanNumber(18, "XVIII");
+		assertRomanNumber(19, "XIX");
+		assertRomanNumber(20, "XX");
+	}
+	
+	private void assertRomanNumber(int arabic, String roman) {
+		assertEquals(roman, Romans.toRoman(arabic));
 	}
 }
