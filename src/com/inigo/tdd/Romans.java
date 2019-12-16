@@ -10,6 +10,20 @@ public class Romans {
 			res = "II";
 		}else if (arabic == 3) {
 			res = "III";
+		}else if (arabic == 4) {
+			res = "IV";
+		}else if (arabic == 5) {
+			res = "V";
+		}else if (arabic == 6) {
+			res = "VI";
+		}else if (arabic == 7) {
+			res = "VII";
+		}else if (arabic == 8) {
+			res = "VIII";
+		}else if (arabic == 9) {
+			res = "IX";
+		}else if (arabic == 10) {
+			res = "X";
 		}
 		return res;
 	}
