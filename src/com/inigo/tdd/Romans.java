@@ -6,10 +6,10 @@ public class Romans {
 		String res = "";
 		if (arabic <= 3 ) {
 			res = calculateRoman(arabic, "", 0);
-		}else if (arabic == 4) {
-			res = "IV";
 		}else if (arabic >= 5 && arabic <= 8) {
 			res = calculateRoman(arabic, "V", 5);
+		}else if (arabic == 4) {
+			res = "IV";
 		}else if (arabic == 9) {
 			res = "IX";
 		}else if (arabic == 10) {
