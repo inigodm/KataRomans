@@ -3,16 +3,14 @@ package com.inigo.tdd;
 public class Romans {
 
 	public static String toRoman(int arabic) {
+		char[] numerosChars = ((Integer)arabic).toString().toCharArray();
+		
+		if (numerosChars.length <= 1) {
+			return pasarUnidad(arabic);
+		}
+		
 		String res = "";
-		if (arabic <= 3 ) {
-			res = sumarI(arabic, "", 0);
-		}else if (arabic >= 5 && arabic <= 8) {
-			res = sumarI(arabic, "V", 5);
-		}else if (arabic == 4) {
-			res = "IV";
-		}else if (arabic == 9) {
-			res = "IX";
-		}else if (arabic == 10) {
+		if (arabic == 10) {
 			res = "X";
 		}else if (arabic == 11) {
 			res = "XI";
@@ -34,6 +32,20 @@ public class Romans {
 			res = "XIX";
 		}else if (arabic == 20) {
 			res = "XX";
+		}
+		return res;
+	}
+
+	private static String pasarUnidad(int arabic) {
+		String res = "";
+		if (arabic <= 3 ) {
+			res = sumarI(arabic, "", 0);
+		}else if (arabic >= 5 && arabic <= 8) {
+			res = sumarI(arabic, "V", 5);
+		}else if (arabic == 4) {
+			res = "IV";
+		}else if (arabic == 9) {
+			res = "IX";
 		}
 		return res;
 	}
