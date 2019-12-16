@@ -3,18 +3,10 @@ package com.inigo.tdd;
 public class Romans {
 
 	public static String toRoman(int arabic) {
-		char[] numerosChars = ((Integer)arabic).toString().toCharArray();
+		char[] numerosChars = String.format("%02d", ((Integer)arabic)).toCharArray();
 		
-		if (numerosChars.length <= 1) {
-			return pasarUnidad(arabic);
-		}
-		
-		if (numerosChars.length == 2) {
-			return pasarDecena(Character.getNumericValue(numerosChars[0])) + 
+		return pasarDecena(Character.getNumericValue(numerosChars[0])) + 
 				   pasarUnidad(Character.getNumericValue(numerosChars[1]));
-		}
-				
-		return "";
 	}
 
 	private static String pasarUnidad(int arabic) {
