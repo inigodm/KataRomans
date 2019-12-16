@@ -9,31 +9,11 @@ public class Romans {
 			return pasarUnidad(arabic);
 		}
 		
-		String res = "";
-		if (arabic == 10) {
-			res = "X";
-		}else if (arabic == 11) {
-			res = "XI";
-		}else if (arabic == 12) {
-			res = "XII";
-		}else if (arabic == 13) {
-			res = "XIII";
-		}else if (arabic == 14) {
-			res = "XIV";
-		}else if (arabic == 15) {
-			res = "XV";
-		}else if (arabic == 16) {
-			res = "XVI";
-		}else if (arabic == 17) {
-			res = "XVII";
-		}else if (arabic == 18) {
-			res = "XVIII";
-		}else if (arabic == 19) {
-			res = "XIX";
-		}else if (arabic == 20) {
-			res = "XX";
+		if (numerosChars.length == 2) {
+			return "X" + pasarUnidad(Character.getNumericValue(numerosChars[1]));
 		}
-		return res;
+				
+		return "";
 	}
 
 	private static String pasarUnidad(int arabic) {
