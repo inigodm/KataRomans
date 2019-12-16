@@ -5,34 +5,30 @@ public class Romans {
 	public static String toRoman(int arabic) {
 		char[] numerosChars = String.format("%02d", ((Integer)arabic)).toCharArray();
 		
-		return pasarDecena(Character.getNumericValue(numerosChars[0])) + 
-				   pasarUnidad(Character.getNumericValue(numerosChars[1]));
+		return pasarCifra(Character.getNumericValue(numerosChars[0]),
+				"X",
+				"L",
+				"C") + 
+			   pasarCifra(Character.getNumericValue(numerosChars[1]),
+			    "I",
+			    "V",
+			    "X");
 	}
 
-	private static String pasarUnidad(int arabic) {
+	private static String pasarCifra(
+			int arabic,
+			String uno,
+			String cinco,
+			String diez) {
 		String res = "";
 		if (arabic <= 3 ) {
-			res = sumar1(arabic, "", 0, "I");
+			res = sumar1(arabic, "", 0, uno);
 		}else if (arabic >= 5 && arabic <= 8) {
-			res = sumar1(arabic, "V", 5, "I");
+			res = sumar1(arabic, cinco, 5, uno);
 		}else if (arabic == 4) {
-			res = "IV";
+			res = uno + cinco;
 		}else if (arabic == 9) {
-			res = "IX";
-		}
-		return res;
-	}
-	
-	private static String pasarDecena(int arabic) {
-		String res = "";
-		if (arabic <= 3 ) {
-			res = sumar1(arabic, "", 0, "X");
-		}else if (arabic >= 5 && arabic <= 8) {
-			res = sumar1(arabic, "L", 5, "X");
-		}else if (arabic == 4) {
-			res = "XL";
-		}else if (arabic == 9) {
-			res = "XC";
+			res = uno + diez;
 		}
 		return res;
 	}
