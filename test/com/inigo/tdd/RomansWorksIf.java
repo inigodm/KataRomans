@@ -25,4 +25,11 @@ public class RomansWorksIf {
 		String roman = Romans.toRoman(arabic);
 		assertEquals("II", roman);
 	}
+	
+	@Test
+	public void given_Three_then_returns_III() {
+		int arabic = 3;
+		String roman = Romans.toRoman(arabic);
+		assertEquals("III", roman);
+	}
 }

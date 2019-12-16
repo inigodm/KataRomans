@@ -8,6 +8,8 @@ public class Romans {
 			res = "I";
 		}else if (arabic == 2) {
 			res = "II";
+		}else if (arabic == 3) {
+			res = "III";
 		}
 		return res;
 	}
